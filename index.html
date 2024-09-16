@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombie Report to CDC</title>
+    <title>Zombie Report & Tracker</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/tracker.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -14,7 +16,9 @@
         <img src="./images/zombie.png" alt="Zombie Report Graphic" class="graphic">
     </div>
 
-    <div class="content">
+    <!-- Container for content and zombie metrics side by side -->
+    <div class="main-content">
+        <!-- Zombie Report Section -->
         <div class="card">
             <h2>Report a Zombie</h2>
             <p>If you've spotted a zombie, fill out the form below to notify the CDC.</p>
@@ -29,19 +33,31 @@
 
                 <button type="submit">Submit Report</button>
             </form>
+        </div>
 
-            <div id="savedReports">
-                <label>Saved Reports</label>
-                <ul id="reportsList"></ul>
-            </div>
+        <!-- Zombie Tracker Section -->
+        <div class="zombie-metrics">
+            <h2>Zombie Outbreak Metrics</h2>
+            <p>Total Zombies Spotted: <span id="zombieCount">0</span></p>
+            <p>Infection Rate: <span id="infectionRate">0%</span></p>
+            <p>Outbreak Level: <span id="outbreakLevel">Unknown</span></p>
 
-            <button id="downloadJson">Download Reports as Text</button>
+            <h3>Zombie Sightings by Location:</h3>
+            <ul id="locationsList"></ul>
+
+            <h3>Zombie Growth Over Time</h3>
+            <canvas id="zombieGrowthChart"></canvas>
         </div>
     </div>
 
-
+    <!-- List of saved reports below the content and tracker -->
+    <div id="savedReports">
+        <h2>Saved Reports</h2>
+        <ul id="reportsList"></ul>
+    </div>
 
     <script src="./js/script.js"></script>
+    <script src="./js/tracker.js"></script>
 </body>
 
 </html>

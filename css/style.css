@@ -1,10 +1,18 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background: url("./images/l\ moon.png") no-repeat center center fixed;
+  background: url("../images/l moon.png") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
   color: #eee;
+}
+
+h1 {
+  color: #08e94b;
+}
+
+h2 {
+  color: #08e94b;
 }
 
 .header {
@@ -18,42 +26,35 @@ body {
   margin: 0 auto;
 }
 
-.content {
+/* Flex container for the form and tracker */
+.main-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px; /* Added padding for smaller screens */
+  justify-content: space-around;
+  align-items: stretch; /* Ensures both sections are the same height */
+  padding: 20px;
+  margin-top: 20px;
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0.8);
+.card,
+.zombie-metrics {
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  padding: 30px; /* More padding for better spacing */
-  max-width: 500px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Added a bit more shadow for depth */
+  padding: 30px;
+  width: 45%; /* Set equal width for both sections */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
-  transform: translateY(0);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures even spacing inside each section */
 }
 
+/* Hover effect for the report card */
 .card:hover {
-  transform: translateY(-5px); /* Subtle hover animation to lift the card */
+  transform: translateY(-5px);
 }
 
-.card h2 {
-  color: #333;
-  font-family: "Creepster", cursive;
-  margin-bottom: 20px;
-}
-
-.card p {
-  color: #555;
-  margin-bottom: 15px;
-}
-
-/* Spacing and visual improvements for form elements */
+/* Styles for form elements */
 input,
 textarea {
   width: 100%;
@@ -61,9 +62,9 @@ textarea {
   padding: 12px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 16px; /* Increase font size for better readability */
+  font-size: 16px;
   background-color: rgba(0, 0, 0, 0.1);
-  color: #ddd;
+  color: #e00909;
   border: 1px solid #555;
   transition: border 0.3s ease, background-color 0.3s ease;
 }
@@ -72,10 +73,9 @@ input:focus,
 textarea:focus {
   outline: none;
   background-color: rgba(0, 0, 0, 0.15);
-  border: 1px solid #4caf50; /* Green border when focusing */
+  border: 1px solid #4caf50;
 }
 
-/* Spacing for buttons and labels */
 button {
   background-color: #4caf50;
   color: white;
@@ -90,26 +90,14 @@ button {
 
 button:hover {
   background-color: #388e3c;
-  transform: scale(1.05); /* Subtle scaling on hover */
+  transform: scale(1.05);
 }
 
-label {
-  font-weight: bold;
-  color: #222;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #4c08e9;
-  border: 1px solid #555;
-}
-
+/* Saved reports section */
 #savedReports {
-  margin-top: 20px;
-  text-align: left;
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
 }
 
 #reportsList {
@@ -118,9 +106,38 @@ textarea {
 }
 
 #reportsList li {
-  background: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.75); /* White background */
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
-  color: #302002;
+  color: #eb2a08;
+}
+
+.zombie-metrics {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #eee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.zombie-metrics h2 {
+  color: #ff4444;
+  font-family: "Creepster", cursive;
+}
+
+.zombie-metrics p,
+.zombie-metrics ul {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
 }
