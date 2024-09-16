@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Report to CDC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Report Zombies to the CDC</h1>
+        <img src="./images/zombie.png" alt="Zombie Report Graphic" class="graphic">
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Report a Zombie</h2>
+            <p>If you've spotted a zombie, fill out the form below to notify the CDC.</p>
+            <form id="zombieForm">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="description">Description of Zombie:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
