@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Tracker</title>
+    <link rel="stylesheet" href="./css/tracker.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="zombie-metrics">
+        <h2>Zombie Outbreak Metrics</h2>
+        <p>Total Zombies Spotted: <span id="zombieCount">0</span></p>
+        <p>Infection Rate: <span id="infectionRate">0%</span></p>
+        <p>Outbreak Level: <span id="outbreakLevel">Unknown</span></p>
+
+        <h3>Zombie Sightings by Location:</h3>
+        <ul id="locationsList"></ul>
+
+        <h3>Zombie Growth Over Time</h3>
+        <canvas id="zombieGrowthChart"></canvas>
+    </div>
+    <script src="js/tracker.js"></script>
+</body>
+
+</html>

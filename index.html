@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zombie Report to CDC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -19,6 +19,8 @@
             <h2>Report a Zombie</h2>
             <p>If you've spotted a zombie, fill out the form below to notify the CDC.</p>
             <form id="zombieForm">
+                <input type="hidden" id="reportId" name="reportId" /> <!-- Hidden field to store report ID -->
+
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" required>
 
@@ -27,10 +29,19 @@
 
                 <button type="submit">Submit Report</button>
             </form>
+
+            <div id="savedReports">
+                <label>Saved Reports</label>
+                <ul id="reportsList"></ul>
+            </div>
+
+            <button id="downloadJson">Download Reports as Text</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
