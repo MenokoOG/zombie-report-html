@@ -26,9 +26,9 @@ form.addEventListener("submit", function (event) {
   } else {
     // Add new report
     saveReport(report);
-    addReportToList(report);
   }
 
+  loadReports(); // Reload the reports to reflect the new or edited one
   form.reset();
   editIndex = null; // Reset edit index after saving
 });
