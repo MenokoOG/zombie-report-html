@@ -12,7 +12,6 @@ h1 {
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
-
   background-color: rgba(226, 30, 30, 0.3);
 }
 
@@ -22,8 +21,6 @@ h1 {
 
 h2 {
   color: #06f3df;
-  /* background-color: #4caf50; */
-
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
@@ -46,7 +43,7 @@ h2 {
 .main-content {
   display: flex;
   justify-content: space-around;
-  align-items: stretch; /* Ensures both sections are the same height */
+  align-items: stretch;
   padding: 20px;
   margin-top: 20px;
 }
@@ -56,21 +53,18 @@ h2 {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 30px;
-  width: 45%; /* Set equal width for both sections */
+  width: 45%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures even spacing inside each section */
+  justify-content: space-between;
 }
 
-/* Hover effect for the report card */
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Styles for form elements */
 input,
 textarea {
   width: 100%;
@@ -100,16 +94,13 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
   margin-top: 15px;
 }
 
 button:hover {
   background-color: #388e3c;
-  transform: scale(1.05);
 }
 
-/* Saved reports section */
 #savedReports {
   margin-top: 30px;
   text-align: center;
@@ -122,7 +113,7 @@ button:hover {
 }
 
 #reportsList li {
-  background-color: rgba(255, 255, 255, 0.75); /* White background */
+  background-color: rgba(255, 255, 255, 0.75);
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
@@ -140,12 +131,6 @@ button:hover {
   font-family: "Creepster", cursive;
 }
 
-.zombie-metrics p,
-.zombie-metrics ul {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -156,4 +141,30 @@ li {
   padding: 8px;
   margin: 5px 0;
   border-radius: 5px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card,
+  .zombie-metrics {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  h1,
+  h2 {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
 }
