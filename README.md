@@ -1,5 +1,7 @@
 # Zombie Report & Tracker
 
+Demo: https://menokoog.github.io/zombie-report-html/
+
 Welcome to the **Zombie Report & Tracker** project! This is an interactive web application designed to teach the basics of HTML, CSS, and JavaScript, with a creative twist — reporting zombie sightings to the CDC!
 
 ## Project Overview
